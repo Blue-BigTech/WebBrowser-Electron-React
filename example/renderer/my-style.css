@@ -1,0 +1,554 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.none {
+  display: none !important;
+}
+
+.line-normal {
+  line-height: normal;
+}
+
+.discord, .github, .jira, .link {
+  margin-right : 10px;
+}
+
+div.center {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background: url(img/ScreenShot.png) no-repeat center center fixed;
+  font-size: 14px;
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+.st {
+  background-color: #000000;
+  backdrop-filter: blur(30px);
+  opacity: 0.9;
+}
+
+.top-bar {
+  width: 100%;
+  height: 5.2%;
+  display: flex;
+}
+
+.body-container {
+  height: 94.8%;
+  width: 100%;
+  display: flex;
+}
+
+.sys-bar {
+  width: 4.4%;
+  height: 100%;
+  display: flex;
+}
+
+.sys-bar a.maximize {
+  color: rgb(32, 205, 20);
+  text-shadow: 0 0 1px rgba(8, 77, 3, 1);
+  margin: 2px;
+}
+
+.sys-bar a.maximize i {
+  font-size: 12.5px
+}
+
+.sys-bar a.minimize {
+  color: rgb(255, 213, 0);
+  text-shadow: 0 0 1px rgba(65, 42, 2, 1);
+  margin: 2px;
+}
+
+.sys-bar a.minimize i {
+  font-size: 12.5px
+}
+
+.sys-bar a.exit {
+  color: rgb(255, 0, 0);
+  text-shadow: 0 0 1px rgba(50, 1, 1, 1);
+  margin-left: 8px;
+  margin: 2px;
+}
+
+i.exit:hover {
+  color: rgb(200, 0, 0);
+}
+.sys-bar a.exit i {
+  font-size: 12.5px
+}
+
+.left-bar {
+  width: 4.4%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.95
+}
+
+.task-bar {
+  width: 13.6%;
+  height: 100%;
+}
+
+.content-body {
+  width: 82.03%;
+  height: 100%;
+  background-color: #747481;
+  backdrop-filter: blur(30px);
+  opacity: 0.85;
+}
+
+.content-workspace {
+  width: calc(100% - 20px);
+  height: calc(100% - 10px);
+  margin: 10px;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.ctrl-bar {
+  width: 95.6%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.95
+}
+
+.ctrl-bar-unknown {
+  position: absolute;
+  left: 15%;
+  top: 10px;
+  height: 61%;
+  width: 2.1%;
+  text-align: center;
+  display: flex;
+
+  border: 1px solid #707070;
+  border-radius: 4px;
+}
+
+.ctrl-bar-checker {
+  position: absolute;
+  margin-left: 15.5%;
+  top: 20%;
+  height: 60%;
+  width: 20px;
+
+  background: url(img/Icon\ awesome-check.png) no-repeat center center;
+  background-size: contain;
+  opacity: 0.27;
+}
+
+.ctrl-bar-plus {
+  position: absolute;
+  left: 26.5%;
+  top : calc((100% - 16px) / 2);
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+
+  background: url(img/Icon-feather-plus.png) no-repeat center center;
+  background-size: contain;
+}
+
+.ctrl-bar-bf {
+  position: absolute;
+  left: 28.5%;
+  top: 20%;
+  height: 60%;
+  width: 3.5%;
+  display: flex;
+}
+
+.ctrl-bar-back {
+  width: 50%;
+  border: 1px solid #707070;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+}
+
+.ctrl-bar-forward {
+  width: 50%;
+  border: 1px solid #707070;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+}
+
+.ctrl-bar-url {
+  position: absolute;
+  left: 34%;
+  top: 20%;
+  height: 3vh;
+  width: 28%;
+  display: flex;
+  align-items:center;
+  border: 1px solid #707070;
+  border-radius: 4px;
+}
+
+.ctrl-bar-url .bar-address {
+  width: calc(100% - 1.6vw - 2.5vw);
+  height: 2.5vh;
+  padding: 0.5vh 0;
+  background: rgb(0, 0, 0);
+  outline: none;
+  font-size: 12px;
+  color: #ccc;
+  border: 0;
+}
+
+.ctrl-bar-url .bar-address:focus {
+  background: rgb(0, 0, 0);
+  color: #ccc;
+}
+
+.bar-lock {
+  width: 1.6vw;
+  height: 100%;
+  background: url(img/Icon-awesome-lock.png) no-repeat center center;
+  background-size: initial;
+}
+
+.fav-icon {
+  width: 2.5vw;
+  height: 100%;
+  background: url(img/Image\ 2.png) no-repeat center center;
+  background-size: initial;
+}
+
+.ctrl-bar-refresh {
+  position: absolute;
+  top : calc((100% - 18px) / 2);
+  left: 62.8%;
+  height: 18px;
+  width: 18px;
+  border-radius: 9px;
+
+  background: url(img/Icon\ ionic-ios-refresh.png) no-repeat center center;
+  background-size: initial;
+}
+
+.ctrl-bar-cancel {
+  position: absolute;
+  left: 64.5%;
+  top : calc((100% - 16px) / 2);
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+
+  background: url(img/Icon\ ionic-md-close.png) no-repeat center center;
+  background-size: initial;
+}
+
+.ctrl-bar-tools {
+  position: absolute;
+  right: 3%;
+  top: 20%;
+  height: 60%;
+  width: 17%;
+  display: flex;
+  border: 1px solid #707070;
+  border-radius: 4px;
+}
+
+.ctrl-bar-tool-item {
+  width: 12.5%;
+  height: 60%;
+  margin: auto;
+}
+
+.tool-spotify {
+  background: url(img/ctrl_tools/Icon\ awesome-spotify.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-metro-fire {
+  background: url(img/ctrl_tools/Icon\ metro-fire.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-email {
+  background: url(img/ctrl_tools/Icon\ material-email.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-phone {
+  background: url(img/ctrl_tools/Icon\ material-phone-iphone.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-camera {
+  background: url(img/ctrl_tools/Icon\ feather-camera.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-colorize {
+  background: url(img/ctrl_tools/Icon\ material-colorize.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-code {
+  background: url(img/ctrl_tools/Icon\ feather-code.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-link {
+  background: url(img/ctrl_tools/Icon\ feather-link.png) no-repeat center center;
+  background-size: contain;
+}
+
+.ctrl-bar-unknown1 {
+  position: absolute;
+  right: 18px;
+  top: 20%;
+  height: 60%;
+  width: 19px;
+  display: flex;
+}
+
+.tab-bar {
+  position : absolute;
+  top: 5.2%;
+  width: 4.4%;
+  height: auto;
+}
+
+.tab-item {
+  margin-left: 0.6vw;
+  margin-right: 0.6vw;
+  margin-bottom: 0.93vh;
+  padding: 3px;
+  width: 3.23vw;
+  height: 3vw;
+  background: rgba(74, 73, 78, 0.27) 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+}
+
+.tab-item.active {
+  border: 4px solid #234688;
+}
+
+.tab-plus {
+  margin-left: 0.6vw;
+  margin-right: 0.6vw;
+  margin-bottom: 0.93vh;
+  width: 3.23vw;
+  height: 3vw;
+  border-radius: 8px;
+  display: flex;
+}
+
+.pin-bar {
+  position : absolute;
+  bottom: 0px;
+  width: 4.4%;
+  height: 31%;
+}
+
+.pin-avatar {
+  position: absolute;
+  bottom: 3vh;
+  left: 0.93vw;
+  width: 2.5vw;
+  height: 2.5vw;
+}
+
+.pin-tools {
+  width: 1.5vw;
+  height: auto;
+  margin: auto;
+}
+
+.pin-tool-item {
+  width: 100%;
+  height: 1.5vw;
+  border-radius: 3px;
+  margin-bottom: 0.8vw;
+}
+
+.center-img {
+  margin: auto;
+  display: block;
+}
+
+.container-img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.tool-check {
+  background: url(img/pin_tools/Icon\ awesome-check.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-github {
+  background: url(img/pin_tools/Icon\ awesome-github.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-pmail {
+  background: url(img/pin_tools/Icon\ feather-mail.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-chatbubble {
+  background: url(img/pin_tools/Icon\ material-chat_bubble_outline.png) no-repeat center center;
+  background-size: contain;
+}
+
+.tool-bookmark {
+  background: url(img/pin_tools/Icon\ metro-bookmarks.png) no-repeat center center;
+  background-size: contain;
+}
+
+div.normal-clickable:hover {
+  background-color: rgb(97, 97, 96);
+}
+div.normal-clickable:active {
+  background-color: rgb(43, 42, 42);
+}
+
+ul.site-ul {
+  margin-left: 10px;
+  list-style: none;
+}
+
+ul.task-ul {
+  list-style: none;
+}
+
+.site-list{
+  margin-top: 0px;
+}
+
+.list-name {
+  text-align: left;
+  margin-left: 17px;
+  margin-bottom: 20px;
+  font: normal normal medium 20px/27px Airbnb Cereal App;
+  letter-spacing: 0px;
+  color: #FF9763;
+  opacity: 1;
+}
+
+.site-item {
+  border-left: 3px solid transparent;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  margin-top: 1.2vh;
+  margin-bottom: 1.2vh;
+  color: white;
+  text-align: left;
+  font: normal normal normal 12px/16px Airbnb Cereal App;
+  letter-spacing: 0px;
+}
+.site-item:hover {
+  background-color: rgb(51, 50, 50);
+}
+.site-item.active {
+  border-left: 3px solid #FF9763;
+}
+
+p {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  float: right;
+  display: inline;
+}
+
+.site-item-img {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+}
+
+.task-list{
+  margin-top: 20px;
+}
+
+.task-item {
+  color: white;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-right: 23px;
+  margin-top : 10px;
+  /* background-color: aqua; */
+}
+
+.task-active-mark {
+  width: 10px;
+  height: 5.5vh;
+  margin-top: 9px;
+  margin-bottom: 28px;
+  margin-right : 10px;
+  border-right: 3px solid transparent;
+}
+
+.task-active-mark.active {
+  border-right: 3px solid #FF9763;
+}
+
+.task-item-body {
+  width: calc(100% - 33px);
+  border-bottom: 1px solid rgb(61, 61, 61);
+  padding-bottom: 10px;
+}
+.task-item-body:hover {
+  background-color: rgb(20, 20, 20);
+}
+
+.task-item-top {
+  display: flex;
+  height: 24px;
+}
+
+.task-item-icon {
+  /* display: flex; */
+}
+
+.task-item-title {
+  text-align: left;
+  font: normal normal medium 11px/15px Airbnb Cereal App;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+}
+
+.task-item-time {
+  position: absolute;
+  right: 10px;
+  text-align: right;
+  font: normal normal normal 8px/12px Airbnb Cereal App;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+.task-item-status {
+  height: 24px;
+  text-align: left;
+  font: normal normal normal 9px/12px Airbnb Cereal App;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+}
+
+.task-item-desc {
+  text-align: left;
+  font: normal normal normal 7px/12px Airbnb Cereal App;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+}
